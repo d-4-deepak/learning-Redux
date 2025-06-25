@@ -40,28 +40,28 @@ console.log("initial State: ", store.getState());
 
 //Step 4: Dispatch an action to add a task
 
-store.dispatch({type:ADD_TASK,payload:"learn redux also"})
-console.log("Updated State: ", store.getState());
+// store.dispatch({type:ADD_TASK,payload:"learn redux also"})
+// console.log("Updated State: ", store.getState());
 
-store.dispatch({type:ADD_TASK,payload:"Buy Mango"})
-console.log("Updated State: ", store.getState());
+// store.dispatch({type:ADD_TASK,payload:"Buy Mango"})
+// console.log("Updated State: ", store.getState());
 
-store.dispatch({type:DELETE_TASK,payload:1})
-console.log("Deleted State: ", store.getState());
+// store.dispatch({type:DELETE_TASK,payload:1})
+// console.log("Deleted State: ", store.getState());
 
-const addTask = (data)=>{
+export const addTask = (data)=>{
     return {
         type:ADD_TASK,
         payload:data
     }
 }
-store.dispatch(addTask("deepak you created action creators"))
-store.dispatch(addTask("buy mango"))
-store.dispatch(addTask("buy banana"))
+// store.dispatch(addTask("deepak you created action creators"))
+// store.dispatch(addTask("buy mango"))
+// store.dispatch(addTask("buy banana"))
 console.log("Deleted State: ", store.getState());
 
 
-const deleteTask = (data)=>{
+export const deleteTask = (data)=>{
 return {
     type:DELETE_TASK,
     payload:data,
